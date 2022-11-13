@@ -95,3 +95,10 @@ def print_sorted(data):
 
 if __name__ == '__main__':
     doctest.testmod()
+
+    # Examples:
+    print_sorted(1)
+    print_sorted((2, 1))
+    print_sorted({2, 1, 4, 3})
+    print_sorted([2, 1, (2, 1), {2, 1, 4, 3}])
+    print_sorted({2: 2, 1: 1, 5: (2, 1), 4: {'2', '1', '4', '3'}})

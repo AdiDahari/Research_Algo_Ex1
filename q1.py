@@ -90,3 +90,15 @@ def f3():
 
 if __name__ == '__main__':
     doctest.testmod()
+    # Examples:
+    print(safe_call(f1, **{'x': 1, 'y': -1.0, 'z': 'z'}))
+    try:
+        print(safe_call(f1, **{'x': 1, 'y': -1, 'z': 'z'}))
+    except:
+        print(f'Expected Exception caught')
+
+    print(safe_call(f2, **{'name': 'Adi'}))
+    try:
+        print(safe_call(f2, **{'name': True}))
+    except:
+        print(f'Expected Exception caught')

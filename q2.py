@@ -28,8 +28,8 @@ def four_neighbor_function(node: Any) -> list:
     >>> four_neighbor_function((1, 1))
     [(2, 1), (0, 1), (1, 2), (1, 0)]
     """
-    (x, y) = node
-    return [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+    (y, x) = node
+    return [(y + 1, x), (y - 1, x), (y, x + 1), (y, x - 1)]
 
 
 """
@@ -110,3 +110,10 @@ def BFS(start, end, neighbor_function):
 
 if __name__ == '__main__':
     doctest.testmod()
+    # Examples:
+    print(BFS((0, 0), (0, 0), four_neighbor_function))
+    print(BFS((0, 0), (0, 1), four_neighbor_function))
+    print(BFS((0, 0), (0, -1), four_neighbor_function))
+    print(BFS((0, 0), (2, 2), four_neighbor_function))
+    print(BFS((0, 0), (-2, -2), four_neighbor_function))
+    print(BFS((0, 0), (10, -2), four_neighbor_function))
