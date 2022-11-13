@@ -50,7 +50,7 @@
     print_sorted({'c': 1, 'b': (5, 4, 3), 'a': ['9', '8', '7']}) => 
         {'a': ['7', '8', '9'], 'b': (3, 4, 5), 'c': 1}
         
-### Q3 - Coding Game solution
+### Q4 - Coding Game solution
   This question is a implementation of a challenge of codingame.com
   
   The challenge: Shadows of the Knight - Episode 1
