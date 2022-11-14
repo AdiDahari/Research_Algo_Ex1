@@ -76,7 +76,6 @@ def safe_call(func, *args, **kwargs):
                     raise Exception(
                         f'Type Error: expected {value}, got {type(kwargs[param])}')
         if args:
-            print(annotations)
             for i in range(len(annotations)):
                 if type(args[i]) is not annotations[i][1]:
                     raise Exception(
@@ -105,7 +104,9 @@ def f3():
 
 if __name__ == '__main__':
     doctest.testmod()
+
     # Examples:
+
     print(safe_call(f1, x=1, y=-1.0, z='z'))
 
     print(safe_call(f1, 1, 2.0, 3))
